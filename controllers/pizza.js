@@ -1,10 +1,11 @@
 const express = require('express');
 const pizModel = require('../models/piz');
 const pizza = express();
-
+// index
 pizza.get('/', (req, res) => {
   let allPizza = pizModel.getAll();
-  res.json(allPizza);
+  res.locals.allPizza = allPizza;
+  res.render('pizza/index');
 });
 
 pizza.get('/:id', (req, res) => {

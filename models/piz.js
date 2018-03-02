@@ -1,4 +1,8 @@
-let pizzaDb = [];
+let pizzaDb = [
+  {id: 0, recipe: 'Palacsinta'},
+  {id: 1, recipe: 'Rétes'},
+  {id: 2, recipe: 'Briós'}
+];
 let idCounter = 0;
 
 const getAll = () => {
